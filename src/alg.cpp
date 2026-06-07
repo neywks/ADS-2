@@ -32,20 +32,24 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double res = 0.0;
-  for (uint16_t i = 1; i <= count; ++i) {
-    double sign = (i % 2 == 0) ? -1.0 : 1.0;
-    double term = pown(x, 2 * i - 1) / fact(2 * i - 1);
-    res += sign * term;
+  double term = x;
+  res += term;
+  
+  for (uint16_t i = 2; i <= count; ++i) {
+    term = term * (-x * x) / ((2 * i - 2) * (2 * i - 1));
+    res += term;
   }
   return res;
 }
 
 double cosn(double x, uint16_t count) {
   double res = 0.0;
-  for (uint16_t i = 0; i <= count; ++i) {
-    double sign = (i % 2 == 0) ? 1.0 : -1.0;
-    double term = pown(x, 2 * i) / fact(2 * i);
-    res += sign * term;
+  double term = 1.0;
+  res += term;
+  
+  for (uint16_t i = 1; i <= count; ++i) {
+    term = term * (-x * x) / ((2 * i - 1) * (2 * i));
+    res += term;
   }
   return res;
 }
