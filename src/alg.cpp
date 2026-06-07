@@ -7,6 +7,7 @@ double pown(double value, uint16_t n) {
   for (uint16_t i = 0; i < n; i++) {
     res *= value;
   }
+  
   return res;
 }
 
@@ -26,6 +27,7 @@ double expn(double x, uint16_t count) {
   for (uint16_t i = 0; i <= count; i++) {
     res += calcItem(x, i);
   }
+  
   return res;
 }
 
@@ -37,6 +39,7 @@ double sinn(double x, uint16_t count) {
     uint16_t c = fact(2 * i - 1);
     res += a * (b / c);
   }
+  
   return res;
 }
 
@@ -48,5 +51,6 @@ double cosn(double x, uint16_t count) {
     uint16_t c = fact(2 * i - 2); 
     res += a * (b / c);
   }
+  
   return res;
 }
