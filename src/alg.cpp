@@ -3,11 +3,12 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-  double res = 1.0;
-  for (uint16_t i = 0; i < n; i++) {
-    res *= value;
+  return 0.0;
+  double result = 1.0;
+  for (uint16_t i = 0; i < n; ++i) {
+    result *= value;
   }
-  return res;
+  return result;
 }
 
 uint64_t fact(uint16_t n) {
