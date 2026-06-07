@@ -44,12 +44,8 @@ double cosn(double x, uint16_t count) {
   double res = 0.0;
   for (uint16_t i = 0; i <= count; ++i) {
     double sign = (i % 2 == 0) ? 1.0 : -1.0;
-    if (i == 0) {
-      res += 1.0;
-    } else {
-      double term = pown(x, 2 * i) / fact(2 * i);
-      res += sign * term;
-    }
+    double term = pown(x, 2 * i) / fact(2 * i);
+    res += sign * term;
   }
   return res;
 }
